@@ -1,0 +1,187 @@
+/* Ваші основні стилі */
+
+/* Глобальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #d32f2f,
+    #212121
+  ); /* Червоно-чорний градієнт */
+  color: white;
+  padding: 20px;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+header nav a:hover {
+  color: #f44336; /* Рожевий колір для акценту */
+}
+
+/* Основні стилі для контенту */
+#hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#hero h2 {
+  font-size: 2rem;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Стилі для секції ігор */
+#games-container {
+  margin-bottom: 30px;
+}
+
+#games-container h3 {
+  font-size: 2rem; /* Збільшуємо розмір шрифта для заголовка */
+  text-align: center;
+  margin-bottom: 20px; /* Відступ від заголовка до списку ігор */
+  color: #fff;
+  text-transform: uppercase; /* Додаємо ефект капіталізації */
+}
+
+/* Стилі для списку ігор */
+#game-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Встановлюємо адаптивні колонки */
+  gap: 20px;
+  justify-items: center;
+}
+
+.game-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%; /* Розтягуємо елемент на всю ширину контейнера */
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.game-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.game-item h4 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.game-item p {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Кнопка завантаження більше ігор */
+#load-more {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#load-more button {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#load-more button:hover {
+  background-color: #d32f2f;
+}
+
+/* Футер */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Медіа запити для планшетів і більших екранів */
+
+/* Для екранів більших за 600px (планшети і малий десктоп) */
+@media (min-width: 600px) {
+  #hero h2 {
+    font-size: 2.5rem;
+  }
+
+  #hero p {
+    font-size: 1.5rem;
+  }
+
+  .game-item {
+    flex-direction: row; /* Відображати ігри в ряд */
+    padding: 20px;
+  }
+
+  .game-item img {
+    width: 50%;
+  }
+}
+
+/* Для екранів більших за 960px (десктопи) */
+@media (min-width: 960px) {
+  body {
+    padding: 40px;
+  }
+
+  header nav ul {
+    gap: 30px;
+  }
+
+  #game-list {
+    grid-template-columns: repeat(3, 1fr); /* Три колонки на великих екранах */
+  }
+
+  .game-item {
+    flex-direction: row; /* Ігри відображаються в ряд для великих екранів */
+    padding: 25px;
+  }
+
+  .game-item img {
+    width: 40%; /* Для великих екранів зменшуємо розмір зображення */
+  }
+
+  #load-more button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+}

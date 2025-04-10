@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PixelNexus</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css" />
-    <!-- JS -->
-    <script src="script.js" defer></script>
+    <title>Pixel Nexus - Список Ігор</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
+
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <!-- Головна навігація -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Головна</a></li>
+          <li><a href="#">Ігри</a></li>
+          <li><a href="#">Про нас</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Головний блок -->
+    <section id="hero">
+      <h2>Вітаємо на Pixel Nexus</h2>
+      <p>Вибір кращих ігор для всіх платформ</p>
+    </section>
+
+    <!-- Секція ігор -->
+    <section id="games-container">
+      <h3>Список ігор</h3>
+      <div id="game-list">
+        <!-- Ігри будуть додаватися через JS -->
+      </div>
+    </section>
+
+    <!-- Кнопка завантажити більше -->
+    <section id="load-more">
+      <button>Завантажити більше</button>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Pixel Nexus. Всі права захищені.</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
